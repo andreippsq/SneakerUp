@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Successful Registration</title>
+</head>
+<body>
+    <h1>Registration was successful</h1>
+    <span>Hello, </span> <span th:text="${user.name}"></span> <span>! </span> <br>
+    <span>The account with the username: </span> <span th:text="${user.username}"></span> <span> has been successfully created. </span> <br>
+
+    <a href="/">Back to homepage</a>
+</body>
+</html>
