@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Your Wishlist</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Size</th>
+        <th>Image</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${boughtList}">
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.description}"></td>
+        <td th:text="${product.size}"></td>
+        <td><img th:src="${product.image}"/></td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/">Back to homepage</a>
+
+</body>
+</html>

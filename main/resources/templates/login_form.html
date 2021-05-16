@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href= "/styleform.css">
+</head>
+<body>
+<div class = "login_container">
+<h1 class = "login">Login</h1>
+<form class = "form1" action="#" th:action="@{/login}" th:object="${loginuser}" method="post">
+
+
+    <input class = "user" type="text"  placeholder="Username" th:field="*{username}" required> <br>
+
+
+    <input class = "pass" type="password"  placeholder="Password" th:field="*{password}" required> <br>
+
+    <button class ="submit" type="submit" align="center">Submit</button>
+
+</form>
+</div>
+</body>
+</html>

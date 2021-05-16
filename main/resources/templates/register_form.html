@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href= "/styleform.css">
+</head>
+<body>
+    <div class="register_container">
+    <h1 class = "login">Registration</h1>
+
+    <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+
+        <input class="user" type="text" placeholder="Full Name" th:field="*{name}" required> <br>
+
+
+        <input class="user" type="text" placeholder="Username" th:field="*{username}" required> <br>
+
+
+        <input class="user" type="text" placeholder="Email" th:field="*{email}" required> <br>
+
+
+        <input class="user" type="password" placeholder="Password" th:field="*{password}" required> <br>
+
+
+        <input class="user" type="password" placeholder="Retype Password" th:field="*{repassword}" required> <br>
+
+
+        <input class="user" type="text" placeholder="Address" th:field="*{address}" required> <br>
+
+
+        <input class="user" type="text" placeholder="Telephone" th:field="*{telephone}" required> <br>
+
+        <button class="submit" type="submit">Submit</button>
+
+        <!--<span>Username</span> <span th:text="${loginuser.username}"></span> <span>is already in use.</span>-->
+    </form>
+    </div>
+</body>
+</html>
